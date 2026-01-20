@@ -1,5 +1,50 @@
+/* Conexión de la fuente de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Configuración raíz para toda la página */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Estilos para el Navbar superior de la página */
+#nav-row {
+    height: 70px;
+}
+#nav-logo-box {
+    display: flex;
+    align-items: center;
+}
+#nav-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: DarkSlateGray;
+}
+#nav-menu-box {
+    display: flex;
+    justify-content: space-between;
+}
+.nav-menu-txt-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.nav-menu-txt {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    color: DarkSlateGray;
+    transition: 0.2s;
+}
+.nav-menu-txt:hover {
+    transform: scale(1.1);
+    background-color: DarkSlateGray;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
 }
