@@ -1,4 +1,4 @@
-import User from "./user.js";
+import User from "./User.js";
 export default class Admin extends User{
     rol = "admin";
     constructor(id, username, email, number, age){
