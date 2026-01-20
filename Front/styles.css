@@ -48,3 +48,62 @@
     padding-left: 8px;
     padding-right: 8px;
 }
+
+/* Estilos para el Hero */
+#hero-row {
+    background-color: WhiteSmoke;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+#hero-col-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+#hero-col-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#h1-hero {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: DarkSlateGray;
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 20px;
+    width: max-content;
+}
+.info {
+    font-weight: 400;
+    color: DarkSlateGray;
+    padding-bottom: 20px;
+}
+.general-button {
+    border: none;
+    background-color: DarkSlateGray;
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    transition: 0.2s;
+}
+.general-button:hover {
+    transform: scale(1.1);
+}
+#hero-img-box {
+    width: 600px;
+    height: 300px;
+    overflow: hidden;
+}
+#hero-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
