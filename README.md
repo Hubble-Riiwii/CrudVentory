@@ -32,13 +32,49 @@
     npx json-server db.json
 ```
 ---
-## Estructura del db.json
-JSON - SERVER
-**1. Configuración general** (`config`) → nombre, logo, contacto, redes sociales.
-**2. Usuarios** (`users`) → administración y empleados.
-**3. Categorías y productos** (`categories y products`) → para el catálogo.
-**4. Ventas** (`sales`) → historial de compras y gestión de pedidos.
-**5. Landing page** (`landing_page`) → hero, banners, características, testimonios, newsletter.
-**6. Dashboard** (`dashboard`) → estadísticas, ventas recientes, alertas de stock.
+## Estructura del db.json  
+JSON - SERVER  
+**1. Configuración general** (`config`) → nombre, logo, contacto, redes sociales.  
+**2. Usuarios** (`users`) → administración y empleados.  
+**3. Categorías y productos** (`categories y products`) → para el catálogo.  
+**4. Ventas** (`sales`) → historial de compras y gestión de pedidos.  
+**5. Landing page** (`landing_page`) → hero, banners, características, testimonios, newsletter.  
+**6. Dashboard** (`dashboard`) → estadísticas, ventas recientes, alertas de stock.  
 
 ---
+## Folder Structure
+     CRUDVENTORY/
+     ├── Back/        
+     │   ├── api/
+     │   │   └── api
+     │   ├── models/
+     │   │   ├── Product.js
+     │   │   └── User.js
+     │   ├── utils/
+     │   │   ├── alerts.js
+     │   │   └── functions.js
+     │   ├── database/
+     │   │   └── db.json
+     │   ├── app.js  #Entry point for JSON-server deployment
+     │   ├── package-lock.json
+     │   └── package.json
+     ├── Front/
+     │   ├── admin/
+     │   │   ├── js/
+     │   │   │   └── script.js
+     │   │   ├── dashboard.css
+     │   │   └── dashboard.html
+     │   ├── assets/
+     │   │   ├── icons/  #Folder to store the icons used in the WebPage
+     │   │   ├── users/  #Folder to store user profile Images
+     │   │   └── images/ #Folder to sotre images used on the WebPage
+     │   ├── css/
+     │   │   ├── style.css
+     │   ├── js/
+     │   │   └── script.js
+     │   ├── index.html
+     │   ├── log_in.html
+     │   ├── sign_up.html
+     ├── .gitignore
+     ├── index.html  #Redirects to frontend/index.html
+     └── README.md
