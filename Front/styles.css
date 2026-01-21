@@ -27,13 +27,20 @@
 }
 #nav-menu-box {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
 }
 .nav-menu-txt-box {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
+    height: 40px;
+    border-radius: 2px;
+    transition: 0.2s;
+}
+.nav-menu-txt-box:hover {
+    background-color: #EECA10;
 }
 .nav-menu-txt {
     text-decoration: none;
@@ -43,11 +50,7 @@
     transition: 0.2s;
 }
 .nav-menu-txt:hover {
-    background-color: #EECA10;
     color: black;
-    border-radius: 5px;
-    padding-left: 8px;
-    padding-right: 8px;
 }
 
 /* Estilos para el Hero */
@@ -60,22 +63,17 @@
     background-position: center;
     background-repeat: no-repeat;
 }
-
-/* COLUMNA HERO */
 #hero-col-left {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-
-/* TEXTO */
 #h1-hero {
     font-size: 2rem;
     font-weight: 700;
     color: white;
     margin-bottom: 20px;
 }
-
 .info {
     color: white;
     max-width: 800px;
@@ -95,21 +93,64 @@
 .general-button:hover {
     transform: scale(1.1);
 }
-#hero-img-box {
-    width: 600px;
-    height: 300px;
-    overflow: hidden;
+
+/* Estilos para los productos más vendidos */
+.orden {
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
-#hero-img-box img {
+.subtitle-page {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+/* Estilos para detalles del producto */
+#details-back-color {
+    background-color: rgb(240, 240, 240);
+}
+.product-img-box {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    margin-top: 40px;
+}
+.product-img-box img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-
-/* Estilos para los productos más vendidos */
-/* .card-img-box { */
-    /* width: 200px;
-    height: 200px; */
-    /* overflow: hidden; */
-    /* border: 2px solid red; */
-/* } */
+.name-product {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+}
+.boxxx {
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px;
+}
+.boxx {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 10px;
+}
+.price-before {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    color: gray;
+    text-decoration: line-through;
+}
+.price-after {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    color: red;
+    background-color: orange;
+    width: max-content;
+}
