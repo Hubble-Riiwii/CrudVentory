@@ -1,0 +1,228 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "Admin Principal",
+            "email": "admin@ferreteria.com",
+            "role": "admin",
+            "password": "111",
+            "last_login": "2026-01-19T12:34:56Z" 
+        },
+        {
+            "id": 2,
+            "name": "Empleado Tienda",
+            "email": "empleado@ferreteria.com",
+            "role": "employee",
+            "password": "123",
+            "last_login": "2026-01-18T09:21:45Z"
+        },
+        {
+            "id": 3,
+            "name": "User 1",
+            "email": "User@ferreteria.com",
+            "role": "user",
+            "password": "123",
+            "last_login": "2026-01-18T09:21:45Z"
+        }
+    ],
+
+    "config": {
+        "site_name": "Ferretería El Tornillo",
+        "logo_url": "url",
+        "theme_color": "#",
+        "contact": {
+            "email": "contacto@ferreteria.com",
+            "phone": "+57##########",
+            "address": "Calle Falsa 123, Ciudad, País"
+        },
+        "social_links": {
+            "facebook": "https://facebook.com/ferreteria",
+            "instagram": "https://instagram.com/ferreteria",
+            "twitter": "https://twitter.com/ferreteria"
+        }
+    },
+
+    "categories": [
+        {
+            "id": 1,
+            "name": "Herramientas Manuales",
+            "description": "Martillos, destornilladores, llaves"
+        },
+        {
+            "id": 2,
+            "name": "Herramientas Eléctricas",
+            "description": "Taladros, sierras, lijadoras"
+        },
+        {
+            "id": 3,
+            "name": "Material de Construcción",
+            "description": "Cemento, arena, ladrillos"
+        },
+        {
+            "id": 4,
+            "name": "Ferretería General",
+            "description": "Tornillería, pegamentos, adhesivos"
+        }
+    ],
+
+    "product_state": [
+        {
+            "id": 1,
+            "state": "Publicado"
+        },
+        {
+            "id": 2,
+            "state": "Borrador"
+        },
+        {
+            "id": 3,
+            "state": "Agotado"
+        }
+    ],
+
+    "products": [
+        {
+            "id": 101,
+            "name": "Martillo 16oz",
+            "category_id": 1,
+            "price": 120.50,
+            "stock": 50,
+            "description": "Martillo de acero con mango de madera",
+            "images": [
+                "https://example.com/productos/martillo1.png",
+                "https://example.com/productos/martillo2.png"
+            ],
+            "product_state": 3
+        },
+        {
+            "id": 102,
+            "name": "Taladro Eléctrico 500W",
+            "category_id": 2,
+            "price": 850.00,
+            "stock": 30,
+            "description": "Taladro potente con velocidad variable",
+            "images": [
+                "https://example.com/productos/taladro1.png"
+            ],
+            "product_state": 1
+        },
+        {
+            "id": 103,
+            "name": "Cemento Gris 25kg",
+            "category_id": 3,
+            "price": 90.00,
+            "stock": 100,
+            "description": "Cemento de alta resistencia",
+            "images": [
+                "https://example.com/productos/cemento.png"
+            ],
+            "product_state": 1
+        }
+    ],
+
+    "sales": [
+        {
+            "id": 1,
+            "user_id": 2,
+            "products": [
+                {
+                    "product_id": 101,
+                    "quantity": 2
+                },
+                {
+                    "product_id": 103,
+                    "quantity": 5
+                }
+            ],
+            "total": 670.0,
+            "date": "2026-01-19T15:20:00Z",
+            "status": "completed"
+        }
+    ],
+
+    "landing_page": {
+        "hero_section": {
+            "title": "Todo para tu Ferretería en un solo lugar",
+            "subtitle": "Encuentra herramientas y materiales de calidad",
+            "background_image": "url",
+            "cta_text": "Comprar Ahora",
+            "cta_link": "/productos"
+        },
+        "features": [
+            {
+                "icon": "fa-truck",
+                "title": "Envío Rápido",
+                "description": "Entrega en 24-48 horas"
+            },
+            {
+                "icon": "fa-shield",
+                "title": "Productos Garantizados",
+                "description": "Calidad comprobada"
+            },
+            {
+                "icon": "fa-tags",
+                "title": "Mejores Precios",
+                "description": "Ofertas y descuentos constantes"
+            }
+        ],
+        "banners": [
+            {
+                "id": 1,
+                "image": "https://example.com/landing/banner1.jpg",
+                "link": "/ofertas",
+                "title": "Promociones de la Semana",
+                "description": "Aprovecha nuestras ofertas especiales"
+            }
+        ],
+        "testimonials": [
+            {
+                "id": 1,
+                "name": "Juan Pérez",
+                "role": "Cliente",
+                "comment": "Excelente atención y productos de calidad",
+                "avatar": "https://example.com/avatars/juan.png"
+            }
+        ],
+        "newsletter": {
+            "title": "Suscríbete a nuestro boletín",
+            "placeholder": "Tu correo electrónico",
+            "button_text": "Suscribirse"
+        }
+    },
+
+    "dashboard": {
+        "stats": {
+            "total_users": 3,
+            "total_sales": 1,
+            "total_revenue": 670.0,
+            "total_products": 3
+        },
+
+        "recent_sales": [
+            {
+                "id": 1,
+                "user": "Empleado Tienda",
+                "products": [
+                    {
+                        "name": "Martillo 16oz",
+                        "quantity": 2
+                    },
+                    {
+                        "name": "Cemento Gris 25kg",
+                        "quantity": 5
+                    }
+                ],
+                "total": 670.0,
+                "date": "2026-01-19T15:20:00Z"
+            }
+        ],
+        
+        "low_stock_alerts": [
+            {
+                "product_id": 102,
+                "product_name": "Taladro Eléctrico 500W",
+                "stock": 30
+            }
+        ]
+    }
+}
