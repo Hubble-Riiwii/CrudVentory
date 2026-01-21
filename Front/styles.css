@@ -154,3 +154,44 @@
     background-color: orange;
     width: max-content;
 }
+
+/* Estilos para el footer */
+#footer-back-color {
+    background-color: black;
+}
+#footer-title {
+    color: #EECA10;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: .625rem;
+}
+.footer-text {
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+    max-width: 17.5rem;
+    margin-top: .625rem;
+    margin-bottom: .625rem;
+}
+.footer-subtitle {
+    color: #EECA10;
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+.footer-last {
+    color: #EECA10;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 3.75rem;
+}
+.footer-row {
+    padding-top: 50px;
+}
+@media (max-width: 576px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
