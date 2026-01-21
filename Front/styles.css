@@ -13,6 +13,9 @@
 #nav-row {
     height: 70px;
 }
+#nav-back-color {
+    background-color: black;
+}
 #nav-logo-box {
     display: flex;
     align-items: center;
@@ -20,7 +23,7 @@
 #nav-logo {
     font-size: 2rem;
     font-weight: 700;
-    color: DarkSlateGray;
+    color: #EECA10;
 }
 #nav-menu-box {
     display: flex;
@@ -36,57 +39,52 @@
     text-decoration: none;
     font-weight: 600;
     font-size: 18px;
-    color: DarkSlateGray;
+    color: #EECA10;
     transition: 0.2s;
 }
 .nav-menu-txt:hover {
-    transform: scale(1.1);
-    background-color: DarkSlateGray;
-    color: white;
+    background-color: #EECA10;
+    color: black;
     border-radius: 5px;
-    padding: 5px;
     padding-left: 8px;
     padding-right: 8px;
 }
 
 /* Estilos para el Hero */
-#hero-row {
-    background-color: WhiteSmoke;
-    padding-top: 50px;
-    padding-bottom: 50px;
+#hero-section {
+    background-image:
+        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+        url("./assets/images/hero-background.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
+
+/* COLUMNA HERO */
 #hero-col-left {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
 }
-#hero-col-right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
+/* TEXTO */
 #h1-hero {
-    font-family: "Montserrat", sans-serif;
     font-size: 2rem;
     font-weight: 700;
-    color: DarkSlateGray;
-    border-radius: 5px;
-    padding: 5px;
-    padding-left: 8px;
-    padding-right: 8px;
-    padding-bottom: 20px;
-    width: max-content;
+    color: white;
+    margin-bottom: 20px;
 }
+
 .info {
-    font-weight: 400;
-    color: DarkSlateGray;
-    padding-bottom: 20px;
+    color: white;
+    max-width: 800px;
+    margin-bottom: 20px;
 }
 .general-button {
     border: none;
-    background-color: DarkSlateGray;
-    color: white;
+    background-color: #EECA10;
+    color: black;
     font-weight: 600;
     border-radius: 5px;
     padding: 5px;
@@ -107,3 +105,11 @@
     height: 100%;
     object-fit: cover;
 }
+
+/* Estilos para los productos más vendidos */
+/* .card-img-box { */
+    /* width: 200px;
+    height: 200px; */
+    /* overflow: hidden; */
+    /* border: 2px solid red; */
+/* } */
