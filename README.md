@@ -2,7 +2,7 @@
 
 ## Folder Structure
      CRUDVENTORY/
-     ├── back/        
+     ├── Back/        
      │   ├── api/
      │   │   └── api
      │   ├── models/
@@ -16,7 +16,7 @@
      │   ├── app.js  #Entry point for JSON-server deployment
      │   ├── package-lock.json
      │   └── package.json
-     ├── front/
+     ├── Front/
      │   ├── admin/
      │   │   ├── js/
      │   │   │   └── script.js
