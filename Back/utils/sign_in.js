@@ -8,7 +8,8 @@ export const signIn= async (name, password, email)=>{
         const user = {
             name: name,
             email:email,
-            password:password
+            password:password,
+            role:"user"
         }
         const response = await fetch(User.db+"users/", {
             method:"POST",

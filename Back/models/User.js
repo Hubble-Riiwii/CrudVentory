@@ -1,6 +1,6 @@
 export default class User{
     static db = "http://localhost:3000";
-    rol = "user";
+    role = "user";
     constructor(id, name, email, password){
         this.id=id;
         this.name=name;
