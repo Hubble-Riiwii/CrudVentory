@@ -45,8 +45,6 @@ JSON - SERVER
 ## Folder Structure
      CRUDVENTORY/
      ├── Back/        
-     │   ├── api/
-     │   │   └── api
      │   ├── models/
      │   │   ├── Product.js
      │   │   └── User.js
@@ -57,6 +55,8 @@ JSON - SERVER
      │   ├── package-lock.json
      │   └── package.json
      ├── Front/
+     │   ├── api/
+     │   │   └── api
      │   ├── admin/
      │   │   ├── js/
      │   │   │   └── script.js
