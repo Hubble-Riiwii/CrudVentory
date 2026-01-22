@@ -2,7 +2,7 @@ import Admin from "../models/Admin.js";
 import User from "../models/User.js"
 export const logIn = async (email, password)=>{
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/; //Regex to verify if it's username or email
-    if(!emailRegex.test(user)){
+    if(!emailRegex.test(email)){
         return new Error("Email invalid")
     }
     try{

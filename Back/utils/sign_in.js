@@ -1,7 +1,7 @@
 import User from "../models/User.js";
 export const signIn= async (name, password, email)=>{
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/; //Regex to verify if it's username or email
-    if(!emailRegex.test(user)){
+    if(!emailRegex.test(email)){
         return new Error("Email invalid")
     }
     try{
@@ -11,7 +11,7 @@ export const signIn= async (name, password, email)=>{
             password:password,
             role:"user"
         }
-        const response = await fetch(User.db+"users/", {
+        const response = await fetch(User.db+"/users", {
             method:"POST",
             headers:{"Content-Type":"applicaton/json"},
             body:JSON.stringify(user)
