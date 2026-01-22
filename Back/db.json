@@ -10,14 +10,6 @@
         },
         {
             "id": 2,
-            "name": "Empleado Tienda",
-            "email": "empleado@ferreteria.com",
-            "role": "employee",
-            "password": "123",
-            "last_login": "2026-01-18T09:21:45Z"
-        },
-        {
-            "id": 3,
             "name": "User 1",
             "email": "User@ferreteria.com",
             "role": "user",

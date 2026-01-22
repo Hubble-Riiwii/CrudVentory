@@ -1,7 +1,3 @@
-import { Product_State } from "./Product_State.js";
-import { Category } from "./Category.js";
-
-
 export default class Product {
     static db = "http://localhost:3000";
     static products = new Map();
@@ -9,21 +5,32 @@ export default class Product {
     constructor(id, name, category_id, price, stock, description, images, product_state) {
         this.id = id;
         this.name = name;
-        this.category_id = Category;
+        let validationCategory = Product.validation(category_id, 'categories');
+        validationCategory.then(async () => {
+            if (await validationCategory === true) {
+                this.category_id = category_id;
+            } else {
+                this.category_id = null;
+            }
+        })
         this.price = price;
         this.stock = stock;
         this.description = description;
         this.images = images;
-        this.product_state = Product_State;
-    }
 
-    // createProduct(Product) {
-    //     return new Product(Product.id, Product.name, Product.category_id, Product.price, Product.stock, Product.description, Product.images, Product.product_state);
-    // }
+        let validationState = Product.validation(category_id, 'product_state');
+        validationState.then(async () => {
+            if (await validationState === true) {
+                this.product_state = product_state;
+            } else {
+                this.product_state = null;
+            }
+        })
+    }
 
     static async getAllProduct() {
         try {
-            const response = await fetch(this.db + "/products/", {
+            const response = await fetch(Product.db + "/products/", {
                 method: "GET",
                 headers: { "Content-Type": "application/json" }
             })
@@ -48,7 +55,7 @@ export default class Product {
             return product
         }
         try {
-            const response = await fetch(Product.db + "/products/:" + idProduct, {
+            const response = await fetch(Product.db + "/products/" + idProduct, {
                 method: "GET",
                 headers: { "Content-Type": "application/json" }
             })
@@ -90,7 +97,7 @@ export default class Product {
             return new Error("ERROR! Not the same id")  
         }
         try {
-            const response = await fetch(Product.db + "/products/:" + idProduct, {
+            const response = await fetch(Product.db + "/products/" + idProduct, {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(Prod)
@@ -122,4 +129,40 @@ export default class Product {
             console.error("error", error)
         }
     }
+
+    static async validation(id, url) {
+        if (url === 'categories') {
+            if (id > 4 || id <= 0) {
+                return false;
+
+            }
+        }
+        if (url === 'product_state') {
+            if (id > 3 || id <= 0) {
+
+                return false;
+            }
+        }
+
+        try {
+            const response = await fetch(`http://localhost:3000/${url}/${id}`);
+
+            if (!response.ok) {
+
+            }
+            const data = await response.json();
+
+            if (!data || Object.keys(data).length === 0) {
+                // console.log('no hay referencia');
+                return false;
+            }
+            // console.log(data);
+            return true;
+
+        } catch (error) {
+            console.error('Error:', error.message);
+            return false;
+        }
+    }
+
 }
