@@ -4,7 +4,7 @@ import { Category } from "./Category.js";
 
 export default class Product {
     static db = "http://localhost:3000";
-    static products = [];
+    static products = new Map();
 
     constructor(id, name, category_id, price, stock, description, images, product_state) {
         this.id = id;
@@ -31,11 +31,10 @@ export default class Product {
                 return new Error(`HTTP Error! ${response.status}`);
             }
             data = await response.json();
-
-            data.map(p => new Product(p?.id, p?.name, p?.category_id, p?.price, p?.stock, p?.description, p?.images, p?.product_state));
-            this.products.concat(data);
-    
-            return data.map(p => new Product(p?.id, p?.name, p?.category_id, p?.price, p?.stock, p?.description, p?.images, p?.product_state)), this.products;
+            for(const p of data){
+                Product.products.set(p?.id, new Product(p?.id, p?.name, p?.category_id, p?.price, p?.stock, p?.description, p?.images, p?.product_state));
+            }
+            return data.map(p => new Product(p?.id, p?.name, p?.category_id, p?.price, p?.stock, p?.description, p?.images, p?.product_state));
 
         } catch (error) {
             console.error("error", error)
