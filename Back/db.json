@@ -82,7 +82,7 @@
 
     "products": [
         {
-            "id": 101,
+            "id": "101",
             "name": "Martillo 16oz",
             "category_id": 1,
             "price": 120.50,
