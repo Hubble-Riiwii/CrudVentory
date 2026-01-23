@@ -11,7 +11,7 @@ const getProductById = async (productId) => {
 //console.log(product); // "3"
 const product = await getProductById(productId);
 document.querySelector(".name-product").textContent = product.name;
-document.querySelector(".product-img-box").innerHTML = `<img src="${product.img}" alt="Cinta">`;
+document.querySelector(".product-img-box").innerHTML = `<img src="${product.images}" alt="Cinta">`;
 
 async function cargarEstadoProducto() {
     const respuesta = await fetch(
