@@ -1,10 +1,13 @@
 export default class Category{
     static db = "http://localhost:3000";
-    static _categories = new Map();
+    static _categories =new Map();
     constructor(id, name, description){
         this.id=id;
         this.name=name;
         this.description = description;
+    }
+    static get categories(){
+        return this._categories;
     }
     static createCategory({id, name, description}){
         try{
@@ -27,25 +30,30 @@ export default class Category{
                 throw new Error(`HTTP ERROR! ${response.status}`)
             }
             const data = await response.json();
-            data.forEach(category=> {
-                this.categories.set(category?.id, this.createCategory(category))
-            });
+            for(const category of data){
+                this._categories.set(category?.id, this.createCategory(category))
+            }
             return true
         } catch(er){
             console.error("error", er)
             return false;
         }
     }
-    static async createNewCategory(category = {id, name, description}){
+    static async createNewCategory({id, name, description}){
         if(!id || !name || !description){
             console.error("Not all necessary values provided");
             return false
+        }
+        const category ={
+            id:id,
+            name:name,
+            description: description
         }
         try{
             if(!(await this.verifyId(id))){
                 throw new Error(`HTTP ERROR!, unavailable id`);
             }   
-            const response = await fetch(this.db+"/product_state/"+id, {
+            const response = await fetch(this.db+"/categories/", {
                 method:"POST",
                 headers:{"Content-Type":"application/json"},
                 body: JSON.stringify(category)
@@ -54,8 +62,8 @@ export default class Category{
                 throw new Error(`HTTP ERROR! ${response.status}`)
             }
             const data = await response.json();
-            this.categories.set(data.id, data);
-            if(this.categories.get(id) === null){
+            this.categories.set(data.id, this.createCategory(data));
+            if(this.categories.has(id)){
                 throw new Error(`HTTP ERROR!, unexpected id`)
             }
             return true;
@@ -70,12 +78,6 @@ export default class Category{
                 return
             };
         }
-        if(this.categories.get(id) === null){
-            return true
-        }
-        return false;
-    }
-    static get categories(){
-        return this._categories;
+        return !this.categories.has(id);
     }
 }

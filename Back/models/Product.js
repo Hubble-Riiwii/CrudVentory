@@ -167,5 +167,5 @@ export default class Product {
     }
     static get states(){
         return Product_State.states;
-    }
+    } 
 }

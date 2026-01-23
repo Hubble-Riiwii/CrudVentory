@@ -5,6 +5,9 @@ export default class Product_State{
         this.id=id;
         this.state=state;
     }
+    static get states(){
+        return this._states;
+    }
     static createState({id, state}){
         try{
             if(!id||!state){
@@ -26,25 +29,29 @@ export default class Product_State{
                 throw new Error(`HTTP ERROR! ${response.status}`)
             }
             const data = await response.json();
-            data.forEach(state=> {
-                this.states.set(state?.id, state?.state)
-            });
+            for (const state of data){
+                this._states.set(state?.id, this.createState(state))
+            }
             return true
         } catch(er){
             console.error("error", er)
             return false
         }
     }
-    static async createNewState(st = {id, state}){
+    static async createNewState({id, state}){
         if(!id || !state){
             console.error("No id or state provided");
             return false
+        }
+        const st = {
+            id:id,
+            state:state
         }
         try{
             if(!(await this.verifyId(id))){
                 throw new Error(`HTTP ERROR!, unavailable id`);
             }   
-            const response = await fetch(this.db+"/product_state/"+id, {
+            const response = await fetch(this.db+"/product_state/", {
                 method:"POST",
                 headers:{"Content-Type":"application/json"},
                 body: JSON.stringify(st)
@@ -53,8 +60,8 @@ export default class Product_State{
                 throw new Error(`HTTP ERROR! ${response.status}`)
             }
             const data = await response.json();
-            this.states.set(data.id, data.state);
-            if(this.states.get(id)===null){
+            this.states.set(data.id, this.createState(data));
+            if(!this.states.has(id)){
                 throw new Error(`HTTP ERROR!, unexpected id`)
             }
             return true;
@@ -69,12 +76,6 @@ export default class Product_State{
                 return
             }
         }
-        if(this.states.get(id)=== null){
-            return true
-        }
-        return false
-    }
-    static get states(){
-        return this._states;
+        return !this.states.has(id);
     }
 }
