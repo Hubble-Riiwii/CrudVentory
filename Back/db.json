@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Admin Principal",
       "email": "admin@ferreteria.com",
       "role": "admin",
@@ -9,12 +9,26 @@
       "last_login": "2026-01-19T12:34:56Z"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "User 1",
       "email": "User@ferreteria.com",
       "role": "user",
       "password": "123",
       "last_login": "2026-01-18T09:21:45Z"
+    },
+    {
+      "id": "e24a",
+      "name": "Sergi Fajardo",
+      "email": "test@example.com",
+      "password": "123456",
+      "role": "user"
+    },
+    {
+      "id": "e2ee",
+      "name": "Juan David",
+      "email": "test2@example.com",
+      "password": "123456",
+      "role": "user"
     }
   ],
   "config": {
@@ -70,21 +84,46 @@
   ],
   "products": [
     {
-      "id": "1007",
-      "name": "Cinta 16oz",
+      "id": "101",
+      "name": "Martillo 16oz",
       "category_id": 1,
       "price": 120.5,
-      "stock": 48,
-      "description": "Cinta de 16 oz de alta resistencia, diseñada para ofrecer un desempeño confiable en aplicaciones industriales, comerciales y domésticas. Fabricada con materiales de calidad que garantizan durabilidad, firmeza y un excelente poder de sujeción. Su presentación de 16 onzas permite un uso prolongado, ideal para trabajos continuos sin necesidad de reemplazos frecuentes. Perfecta para embalaje, fijación, sellado y diversas tareas de mantenimiento.",
-      "img": [
-        "../Front/assets/products/product_1007/(1).jpg"
+      "stock": 50,
+      "description": "Martillo de acero con mango de madera",
+      "images": [
+        "https://example.com/productos/martillo1.png",
+        "https://example.com/productos/martillo2.png"
+      ],
+      "product_state": 3
+    },
+    {
+      "id": "102",
+      "name": "Taladro Eléctrico 500W",
+      "category_id": 2,
+      "price": 850,
+      "stock": 30,
+      "description": "Taladro potente con velocidad variable",
+      "images": [
+        "https://example.com/productos/taladro1.png"
+      ],
+      "product_state": 1
+    },
+    {
+      "id": "103",
+      "name": "Cemento Gris 25kg",
+      "category_id": 3,
+      "price": 90,
+      "stock": 100,
+      "description": "Cemento de alta resistencia",
+      "images": [
+        "https://example.com/productos/cemento.png"
       ],
       "product_state": 1
     }
   ],
   "sales": [
     {
-      "id": 1,
+      "id": "1",
       "user_id": 2,
       "products": [
         {
