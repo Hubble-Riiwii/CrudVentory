@@ -1,9 +1,5 @@
 import User from "../models/User.js";
 export const signIn= async (name, password, email)=>{
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/; //Regex to verify if it's username or email
-    if(!emailRegex.test(email)){
-        return new Error("Email invalid")
-    }
     try{
         const user = {
             name: name,
@@ -25,3 +21,15 @@ export const signIn= async (name, password, email)=>{
         console.error("Error", er)
     }
 }
+export const verifyEmail = async (email)=>{
+    try{
+        const response = await User.verifyEmail(email)
+        if(response){
+            return true
+        }
+        return false;
+    } catch(er){
+        console.error("Error", er)
+    }
+}
+export default signIn

@@ -9,6 +9,9 @@ document.getElementById("loginForm").addEventListener("submit", async e=>{
         sessionStorage.setItem("user", JSON.stringify(user))
         location.reload()
     }
+    const hidden = document.querySelector(".hidden");
+    hidden.classList.remove("hidden");
+
 })
 document.addEventListener("DOMContentLoaded", ()=>{
     const user = JSON.parse(sessionStorage.getItem("user"));
