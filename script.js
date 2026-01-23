@@ -35,7 +35,7 @@ document.addEventListener('click', () => {
 
 const translation = {
   US: {
-    "ferreteria": "Hardware Store",
+    "ferreteria": "ʜᴀʀᴅᴡᴀʀᴇ ꜱᴛᴏʀᴇ",
     "mega-menu": "Mega Menu",
     "navigation": "Navigation",
     "dashboard": "Dashboard",
@@ -53,16 +53,18 @@ const translation = {
     "categories": "🗂️ Categories",
     "orders": "🧾 Orders",
     "customers": "👥 Customers",
-    "sellers": "🧑‍💼 Sellers"
+    "sellers": "🧑‍💼 Sellers",
+    "segmentation":"Segmentation",
+    "credits-and-debts":"Credits and Debts"
   },
   ES: {
-    "ferreteria": "Ferretería",
+    "ferreteria": "𝗳𝗲𝗿𝗿𝗲𝘁𝗲𝗿í𝗮",
     "mega-menu": "Mega Menú",
     "navigation": "NAVEGACIÓN",
     "dashboard": "Panel de Control",
     "landing-page": "Página de Inicio",
     "APPS": "APLICACIONES",
-    "Chat": "Chat",
+    "Chat": "Mensajes",
     "calendar": "Calendario",
     "file-manager": "Gestor de Archivos",
     "ecommerce": "Comercio",
@@ -74,7 +76,9 @@ const translation = {
     "categories": "🗂️ Categorías",
     "orders": "🧾 Pedidos",
     "customers": "👥 Clientes",
-    "sellers": "🧑‍💼 Vendedores"
+    "sellers": "🧑‍💼 Vendedores",
+    "segmentation": "Segmentación",
+    "credits-and-debts": "Creditos y Deudas"
   }
 };
 
