@@ -3,12 +3,12 @@ import Admin from "../../Back/models/Admin.js";
 const rechargueUser = ()=>{
     const userData = JSON.parse(sessionStorage.getItem("user"))
     if(userData === null){
-        return
+        return null
     }
     switch (userData.role) {
         case "admin":
-            return new User(userData?.id, userData?.name, userData?.email, userData?.password)
+            return User.createUser(userData)
         default:
-            return new Admin(userData?.id, userData?.userData, userData?.email, userData?.password)
+            return Admin.createAdmin(userData)
     }
 }

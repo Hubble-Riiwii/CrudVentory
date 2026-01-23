@@ -10,6 +10,12 @@ export default class User{
         this.password = password;
         this.cart = cart; //Expected to include in constructor
     }
+    static createUser({id, name, email, password, cart}){
+        if (!id || !name || !email || !password || !cart) {
+            console.error("Missing required user fields");
+        }
+        return new User(id, name, email, password, cart);
+    }
     static async verifyEmail(email){
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/; //Regex to verify if it's username or email
         if(!emailRegex.test(email)){
@@ -21,7 +27,7 @@ export default class User{
                 headers:{"Content-Type":"application/json"}
             })
             if(!response.ok){
-                return new Error(`HTTP ERROR! ${response.status}`)
+                throw new Error(`HTTP ERROR! ${response.status}`)
             }
             const data = await response.json();
             if(data.length===0){
@@ -30,6 +36,7 @@ export default class User{
             return false
         } catch (err){
             console.error("error", err)
+            return null;
         }
     }
     //Add methods for buying and updating user information

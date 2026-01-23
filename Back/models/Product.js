@@ -1,7 +1,7 @@
+import Product_State from "./Product_State.js"; import Category from "./Category.js";
 export default class Product {
     static db = "http://localhost:3000";
-    static products = new Map();
-
+    static product_states = new Map(); //Preload Product_states if a new State is created
     constructor(id, name, category_id, price, stock, description, images, product_state) {
         this.id = id;
         this.name = name;
@@ -92,77 +92,80 @@ export default class Product {
         }
     }
 
-    static async editProductById(Prod, idProduct) {
-        if(Prod.id !== idProduct){      //Simple verification for id
-            return new Error("ERROR! Not the same id")  
-        }
+    static async editProductById({name, category_id, price, stock, description, images, product_state}, idProduct) {
+        const product = await Product.getProductById(idProduct);
+        product.name = name ?? product.name;    product.category_id = category_id ?? product.category_id;   product.price = price ?? product.price;
+        product.stock = stock ?? product.stock; product.description = description ?? product.description;   product.images = images ?? product.images;
+        product.product_state = product_state ?? product.product_state;
         try {
             const response = await fetch(Product.db + "/products/" + idProduct, {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(Prod)
+                body: JSON.stringify(product)
             })
             if (!response.ok) {
-                return new Error(`HTTP ERROR!, ${response.status}`)
+                throw new Error(`HTTP ERROR!, ${response.status}`)
             }
-            data = await response.json();
-
-            return data.map(p => new Product(p?.id, p?.name, p?.category_id, p?.price, p?.stock, p?.description, p?.images, p?.product_state));
+            const data = await response.json();
+            return data;
 
         } catch (error) {
             console.error("error", error)
+            return null //Return in case of Error
         }
     }
 
     static async deleteProductById(idProduct) {
         try {
-            const response = await fetch(Product.db + "/products/" + idProduct, {
+            const response = await fetch(Product.db+"/products/"+idProduct, {
                 method: "DELETE",
                 headers: { "Content-Type": "application/json" },
             })
             if (!response.ok) {
-                return new Error(`HTTP ERROR!, ${response.status}`)
+                throw new Error(`HTTP ERROR!, ${response.status}`)
             }
             return true;
 
         } catch (error) {
             console.error("error", error)
+            return false
         }
     }
 
     static async validation(id, url) {
+        if(Product.categories.size === 0){
+
+        }
         if (url === 'categories') {
             if (id > 4 || id <= 0) {
                 return false;
-
             }
         }
         if (url === 'product_state') {
             if (id > 3 || id <= 0) {
-
                 return false;
             }
         }
-
         try {
             const response = await fetch(`http://localhost:3000/${url}/${id}`);
-
             if (!response.ok) {
-
             }
             const data = await response.json();
-
             if (!data || Object.keys(data).length === 0) {
                 // console.log('no hay referencia');
                 return false;
             }
             // console.log(data);
             return true;
-
         } catch (error) {
             console.error('Error:', error.message);
             return false;
         }
     }
-
+    static get categories(){
+        return Category.categories;
+    }
+    static get states(){
+        return Product_State.states;
+    }
 }
