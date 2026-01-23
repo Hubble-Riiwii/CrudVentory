@@ -17,245 +17,284 @@
       "last_login": "2026-01-18T09:21:45Z"
     },
     {
-        "id": "e24a",
-        "name": "Sergi Fajardo",
-        "email": "test@example.com",
-        "password": "123456",
-        "role": "user"
+      "id": "e24a",
+      "name": "Sergi Fajardo",
+      "email": "test@example.com",
+      "password": "123456",
+      "role": "user"
     },
     {
-          "id": "e2ee",
-          "name": "Juan David",
-          "email": "test2@example.com",
-          "password": "123456",
-          "role": "user"
-      }
-    ],
-    "categories": [
-        {
-            "id": 1,
-            "name": "Herramientas Manuales",
-            "description": "Martillos, destornilladores, llaves"
-        },
-        {
-            "id": 2,
-            "name": "Herramientas Eléctricas",
-            "description": "Taladros, sierras, lijadoras"
-        },
-        {
-            "id": 3,
-            "name": "Material de Construcción",
-            "description": "Cemento, arena, ladrillos"
-        },
-        {
-            "id": 4,
-            "name": "Ferretería General",
-            "description": "Tornillería, pegamentos, adhesivos"
-        }
-    ],
-
-    "products": [
-        {
-            "id": "101",
-            "name": "Codo PVC 90° de 1/2 pulgada",
-            "category_id": 1,
-            "price": 2800.00,
-            "stock": 150,
-            "description": "Codo de presión en PVC para conducción de agua potable, unión por cementado.",
-            "images": [".././Front/assets/products/101.jpg"],
-            "product_state": 1
-        },
-        {
-            "id": "102",
-            "name": "Codo de Cobre 90° para soldar",
-            "category_id": 1,
-            "price": 9500.00,
-            "stock": 45,
-            "description": "Accesorio de cobre de alta pureza ideal para instalaciones de agua caliente y gas.",
-            "images": [".././Front/assets/products/102.jpg"],
-            "product_state": 1
-        },
-        {
-            "id": "103",
-            "name": "Tee Gas PE-AL-PE Amarilla",
-            "category_id": 1,
-            "price": 18900.00,
-            "stock": 30,
-            "description": "Conexión en T para tubería multicapa de gas, alta resistencia y seguridad.",
-            "images": [".././Front/assets/products/103.jpg"],
-            "product_state": 1
-        },
-        {
-            "id": "105",
-            "name": "Manguera para Gas Natural 3/8 Alta Presión",
-            "category_id": 2,
-            "price": 145000.00,
-            "stock": 12,
-            "description": "Rollo de manguera reforzada para instalaciones certificadas de gas natural y GLP.",
-            "images": [".././Front/assets/products/105.jpg"],
-            "product_state": 1
-        },
-        {
-            "id": "106",
-            "name": "Válvula Cheque en Bronce",
-            "category_id": 1,
-            "price": 38500.00,
-            "stock": 20,
-            "description": "Válvula de retención de flujo unidireccional fabricada en bronce fundido.",
-            "images": [".././Front/assets/products/106.jpg"],
-            "product_state": 2
-        },
-        {
-            "id": "107",
-            "name": "Alicate Pelacables Profesional Ubermann",
-            "category_id": 3,
-            "price": 64900.00,
-            "stock": 15,
-            "description": "Pinza multifunción para electricidad con mangos ergonómicos y aislados.",
-            "images": [".././Front/assets/products/107.webp"],
-            "product_state": 1
-        },
-        {
-            "id": "108",
-            "name": "Brocha Pretul 3 Pulgadas",
-            "category_id": 4,
-            "price": 8200.00,
-            "stock": 100,
-            "description": "Brocha de cerdas naturales con mango de madera para todo tipo de pinturas.",
-            "images": [".././Front/assets/products/108.webp"],
-            "product_state": 1
-        },
-        {
-            "id": "109",
-            "name": "Juego de Destornilladores Stanley x6",
-            "category_id": 3,
-            "price": 89900.00,
-            "stock": 25,
-            "description": "Set de 6 piezas con puntas magnéticas y mangos de agarre cómodo.",
-            "images": [".././Front/assets/products/109.webp"],
-            "product_state": 1
-        },
-        {
-            "id": "110",
-            "name": "Generador Eléctrico Arvek GE 950G",
-            "category_id": 5,
-            "price": 1250000.00,
-            "stock": 4,
-            "description": "Planta eléctrica portátil a gasolina, ideal para respaldo doméstico ligero.",
-            "images": [".././Front/assets/products/110.webp"],
-            "product_state": 3
-        },
-        {
-            "id": "111",
-            "name": "Set de Llaves Allen SAE Ubermann",
-            "category_id": 3,
-            "price": 52000.00,
-            "stock": 0,
-            "description": "Juego de llaves hexagonales en pulgadas con soporte plástico organizador.",
-            "images": [".././Front/assets/products/111.webp"],
-            "product_state": 3
-        },
-        {
-            "id": "112",
-            "name": "Manómetro de Presión 100 PSI",
-            "category_id": 1,
-            "price": 45000.00,
-            "stock": 18,
-            "description": "Medidor de presión analógico para sistemas de agua o aire con carátula de fácil lectura.",
-            "images": [".././Front/assets/products/112.webp"],
-            "product_state": 1
-        },
-        {
-            "id": "113",
-            "name": "Mezcladora de Concreto Bauker",
-            "category_id": 5,
-            "price": 2550000.00,
-            "stock": 3,
-            "description": "Mezcladora tipo trompo de alta resistencia para trabajo pesado en obra civil.",
-            "images": [".././Front/assets/products/113.webp"],
-            "product_state": 1
-        },
-        {
-            "id": "114",
-            "name": "Motosierra a Gasolina Alterman",
-            "category_id": 5,
-            "price": 820000.00,
-            "stock": 7,
-            "description": "Motosierra profesional con motor de alto desempeño para corte de madera y poda.",
-            "images": [".././Front/assets/products/114.webp"],
-            "product_state": 1
-        },
-        {
-            "id": "115",
-            "name": "Válvula de Bola para Gas 1/2\"",
-            "category_id": 1,
-            "price": 24500.00,
-            "stock": 60,
-            "description": "Válvula de paso rápido con manija tipo palanca para control de gas natural o GLP.",
-            "images": [".././Front/assets/products/115.jpg"],
-            "product_state": 1
-        },
-        {
-            "id": "116",
-            "name": "Palustre de Construcción 6\"",
-            "category_id": 3,
-            "price": 14900.00,
-            "stock": 40,
-            "description": "Herramienta metálica con mango de madera para aplicación de morteros y mezclas.",
-            "images": [".././Front/assets/products/116.webp"],
-            "product_state": 1
-        },
-        {
-            "id": "117",
-            "name": "Pintura Fachada Kolor Premium 5 Gal",
-            "category_id": 4,
-            "price": 455000.00,
-            "stock": 12,
-            "description": "Pintura de alta gama para exteriores con protección UV y resistencia a la humedad.",
-            "images": [".././Front/assets/products/117.webp"],
-            "product_state": 1
-        },
-        {
-            "id": "118",
-            "name": "Kit Sistema Solar Fotovoltaico",
-            "category_id": 5,
-            "price": 1650000.00,
-            "stock": 5,
-            "description": "Incluye paneles solares y unidad de control/inversor para energía renovable doméstica.",
-            "images": [".././Front/assets/products/118.webp"],
-            "product_state": 1
-        },
-        {
-            "id": "119",
-            "name": "Esmeriladora Angular 4-1/2\"",
-            "category_id": 5,
-            "price": 220000.00,
-            "stock": 15,
-            "description": "Pulidora eléctrica potente para corte, desbaste y pulido de metales y piedras.",
-            "images": [".././Front/assets/products/119.webp"],
-            "product_state": 1
-        },
-        {
-            "id": "120",
-            "name": "Rodillo para Pintar Profesional",
-            "category_id": 4,
-            "price": 16800.00,
-            "stock": 80,
-            "description": "Rodillo de felpa con mango anatómico para aplicación uniforme de pintura en paredes.",
-            "images": [".././Front/assets/products/120.webp"],
-            "product_state": 1
-        },
-        {
-            "id": "121",
-            "name": "Combo Caladora y Lijadora Black+Decker",
-            "category_id": 5,
-            "price": 315000.00,
-            "stock": 0,
-            "description": "Set de herramientas eléctricas esenciales para proyectos de carpintería y bricolaje.",
-            "images": [".././Front/assets/products/121.webp"],
-            "product_state": 3
-        }
-    ],
+      "id": "e2ee",
+      "name": "Juan David",
+      "email": "test2@example.com",
+      "password": "123456",
+      "role": "user"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Maquinaria y Equipos",
+      "description": "Generadores, mezcladoras, herramientas eléctricas pesadas y sistemas solares."
+    },
+    {
+      "id": 2,
+      "name": "Pintura y Acabados",
+      "description": "Brochas, rodillos y pinturas para protección y decoración de superficies."
+    },
+    {
+      "id": 3,
+      "name": "Herramientas de Mano",
+      "description": "Alicates, destornilladores, llaves Allen y herramientas manuales de construcción."
+    },
+    {
+      "id": 4,
+      "name": "Plomería y Gas",
+      "description": "Tuberías, codos, válvulas, mangueras y accesorios para redes de agua y gas."
+    }
+  ],
+  "products": [
+    {
+      "id": "101",
+      "name": "Codo PVC 90° de 1/2 pulgada",
+      "category_id": 4,
+      "price": 2800,
+      "stock": 150,
+      "description": "Codo de presión en PVC para conducción de agua potable.",
+      "images": [
+        ".././Front/assets/products/101.jpg"
+      ],
+      "product_state": 1
+    },
+    {
+      "id": "102",
+      "name": "Codo de Cobre 90° para soldar",
+      "category_id": 4,
+      "price": 9500,
+      "stock": 45,
+      "description": "Accesorio de cobre ideal para instalaciones de agua caliente y gas.",
+      "images": [
+        ".././Front/assets/products/102.jpg"
+      ],
+      "product_state": 1
+    },
+    {
+      "id": "103",
+      "name": "Tee Gas PE-AL-PE Amarilla",
+      "category_id": 4,
+      "price": 18900,
+      "stock": 30,
+      "description": "Conexión en T para tubería multicapa de gas.",
+      "images": [
+        ".././Front/assets/products/103.jpg"
+      ],
+      "product_state": 1
+    },
+    {
+      "id": "105",
+      "name": "Manguera para Gas Natural 3/8 Alta Presión",
+      "category_id": 4,
+      "price": 145000,
+      "stock": 12,
+      "description": "Rollo de manguera reforzada para instalaciones certificadas.",
+      "images": [
+        ".././Front/assets/products/105.jpg"
+      ],
+      "product_state": 1
+    },
+    {
+      "id": "106",
+      "name": "Válvula Cheque en Bronce",
+      "category_id": 4,
+      "price": 38500,
+      "stock": 20,
+      "description": "Válvula de retención de flujo unidireccional.",
+      "images": [
+        ".././Front/assets/products/106.jpg"
+      ],
+      "product_state": 2
+    },
+    {
+      "id": "112",
+      "name": "Manómetro de Presión 100 PSI",
+      "category_id": 4,
+      "price": 45000,
+      "stock": 18,
+      "description": "Medidor de presión analógico para sistemas de agua o aire.",
+      "images": [
+        ".././Front/assets/products/112.webp"
+      ],
+      "product_state": 1
+    },
+    {
+      "id": "115",
+      "name": "Válvula de Bola para Gas 1/2\"",
+      "category_id": 4,
+      "price": 24500,
+      "stock": 60,
+      "description": "Válvula de paso rápido para control de gas natural o GLP.",
+      "images": [
+        ".././Front/assets/products/115.jpg"
+      ],
+      "product_state": 1
+    },
+    {
+      "id": "107",
+      "name": "Alicate Pelacables Profesional Ubermann",
+      "category_id": 3,
+      "price": 64900,
+      "stock": 15,
+      "description": "Pinza multifunción para electricidad con mangos aislados.",
+      "images": [
+        ".././Front/assets/products/107.webp"
+      ],
+      "product_state": 1
+    },
+    {
+      "id": "109",
+      "name": "Juego de Destornilladores Stanley x6",
+      "category_id": 3,
+      "price": 89900,
+      "stock": 25,
+      "description": "Set de 6 piezas con puntas magnéticas.",
+      "images": [
+        ".././Front/assets/products/109.webp"
+      ],
+      "product_state": 1
+    },
+    {
+      "id": "111",
+      "name": "Set de Llaves Allen SAE Ubermann",
+      "category_id": 3,
+      "price": 52000,
+      "stock": 0,
+      "description": "Juego de llaves hexagonales en pulgadas.",
+      "images": [
+        ".././Front/assets/products/111.webp"
+      ],
+      "product_state": 3
+    },
+    {
+      "id": "116",
+      "name": "Palustre de Construcción 6\"",
+      "category_id": 3,
+      "price": 14900,
+      "stock": 40,
+      "description": "Herramienta metálica para aplicación de morteros.",
+      "images": [
+        ".././Front/assets/products/116.webp"
+      ],
+      "product_state": 1
+    },
+    {
+      "id": "108",
+      "name": "Brocha Pretul 3 Pulgadas",
+      "category_id": 2,
+      "price": 8200,
+      "stock": 100,
+      "description": "Brocha de cerdas naturales con mango de madera.",
+      "images": [
+        ".././Front/assets/products/108.webp"
+      ],
+      "product_state": 1
+    },
+    {
+      "id": "117",
+      "name": "Pintura Fachada Kolor Premium 5 Gal",
+      "category_id": 2,
+      "price": 455000,
+      "stock": 12,
+      "description": "Pintura de alta gama para exteriores con protección UV.",
+      "images": [
+        ".././Front/assets/products/117.webp"
+      ],
+      "product_state": 1
+    },
+    {
+      "id": "120",
+      "name": "Rodillo para Pintar Profesional",
+      "category_id": 2,
+      "price": 16800,
+      "stock": 80,
+      "description": "Rodillo de felpa con mango anatómico.",
+      "images": [
+        ".././Front/assets/products/120.webp"
+      ],
+      "product_state": 1
+    },
+    {
+      "id": "110",
+      "name": "Generador Eléctrico Arvek GE 950G",
+      "category_id": 1,
+      "price": 1250000,
+      "stock": 4,
+      "description": "Planta eléctrica portátil a gasolina.",
+      "images": [
+        ".././Front/assets/products/110.webp"
+      ],
+      "product_state": 3
+    },
+    {
+      "id": "113",
+      "name": "Mezcladora de Concreto Bauker",
+      "category_id": 1,
+      "price": 2550000,
+      "stock": 3,
+      "description": "Mezcladora tipo trompo de alta resistencia.",
+      "images": [
+        ".././Front/assets/products/113.webp"
+      ],
+      "product_state": 1
+    },
+    {
+      "id": "114",
+      "name": "Motosierra a Gasolina Alterman",
+      "category_id": 1,
+      "price": 820000,
+      "stock": 6,
+      "description": "Motosierra profesional con motor de alto desempeño.",
+      "images": [
+        ".././Front/assets/products/114.webp"
+      ],
+      "product_state": 1
+    },
+    {
+      "id": "118",
+      "name": "Kit Sistema Solar Fotovoltaico",
+      "category_id": 1,
+      "price": 1650000,
+      "stock": 5,
+      "description": "Incluye paneles solares y unidad de control.",
+      "images": [
+        ".././Front/assets/products/118.webp"
+      ],
+      "product_state": 1
+    },
+    {
+      "id": "119",
+      "name": "Esmeriladora Angular 4-1/2\"",
+      "category_id": 1,
+      "price": 220000,
+      "stock": 15,
+      "description": "Pulidora eléctrica potente para corte y desbaste.",
+      "images": [
+        ".././Front/assets/products/119.webp"
+      ],
+      "product_state": 1
+    },
+    {
+      "id": "121",
+      "name": "Combo Caladora y Lijadora Black+Decker",
+      "category_id": 1,
+      "price": 315000,
+      "stock": 0,
+      "description": "Set de herramientas eléctricas esenciales.",
+      "images": [
+        ".././Front/assets/products/121.webp"
+      ],
+      "product_state": 3
+    }
+  ],
   "config": {
     "site_name": "Ferretería El Tornillo",
     "logo_url": "url",
