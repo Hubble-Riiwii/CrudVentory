@@ -168,7 +168,7 @@
     font-weight: 600;
     font-size: 22px;
     color: red;
-    background-color: orange;
+    /* background-color: orange; */
     width: max-content;
 }
 
