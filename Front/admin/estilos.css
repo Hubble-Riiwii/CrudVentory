@@ -11,7 +11,7 @@ body{
 }
 /*=====================================================*/
 /*START HEADER*/
-nav{
+/* nav{
   width: 100%;
   height: 70px;
   background-color: #000000;
@@ -45,7 +45,7 @@ nav{
   align-items: center;
   justify-content: center;
   gap: 20px;
-}
+} */
 
 
 /* From Uiverse.io */ 
@@ -238,16 +238,16 @@ input:not(:placeholder-shown) ~ .reset {
 
 /*START ASIDE*/
 
-aside{
-  width: 230px;
-  height: 625px;
-  background-color: rgb(173, 173, 173);
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: flex-start;
-  padding-left: 20px;
-}
+/* aside{ */
+  /* width: 230px; */
+  /* height: 100vh; */
+  /* background-color: rgb(173, 173, 173);
+  display: flex; */
+  /* flex-direction: column; */
+  /* gap: 10px; */
+  /* align-items: flex-start; */
+  /* padding-left: 20px; */
+/* } */
 
 aside ul{
   width: 100%;
@@ -288,8 +288,8 @@ aside .bloque2 img{
   margin-top: 0px;
 }
 
-.item-dropdown {
-  display: block; /* El li padre debe ser block para que el submenu baje */
+/* .item-dropdown {
+  display: block; 
 }
 
 .submenu{
@@ -324,12 +324,30 @@ aside .bloque2 img{
   transition: transform 0.3s;
   cursor: pointer;
   margin-left: 10px;
+} */
+/* .dropdown-submenu {
+  position: relative;
 }
 
-/* Clase para rotar la flecha cuando esté abierto */
-.arrow.rotate {
-  transform: rotate(90deg);
+.dropdown-submenu > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-left: 0.1rem;
+  display: none;
+} */
+
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
 }
+.dropend .dropdown-menu {
+  margin-left: 0.1rem;
+}
+
+
+/* Clase para rotar la flecha cuando esté abierto */
+/* .arrow.rotate {
+  transform: rotate(90deg);
+} */
 /*FINISH ASIDE*/
 /*=====================================================*/
 
@@ -350,52 +368,6 @@ body {
 
   .iconos-opciones {
     gap: 10px;
-  }
-
-}
-
-@media (max-width: 768px) {
-
-  /* NAV */
-  nav {
-    height: auto;
-    flex-direction: column;
-    padding: 10px 0;
-    gap: 10px;
-  }
-
-  .logo-menu {
-    gap: 10px;
-  }
-
-  .form {
-    width: 90%;
-    --width-of-input: 100%;
-  }
-
-  .iconos-opciones {
-    width: 100%;
-    justify-content: space-around;
-  }
-
-  /* ASIDE */
-  aside {
-    width: 100%;
-    height: auto;
-    padding: 15px;
-  }
-
-  aside h2 {
-    margin: 10px 0;
-    font-size: 16px;
-  }
-
-  aside ul li {
-    padding: 8px 0;
-  }
-
-  .submenu {
-    padding-left: 20px;
   }
 
 }

@@ -9,12 +9,11 @@
       "last_login": "2026-01-19T12:34:56Z"
     },
     {
-      "id": "2",
-      "name": "User 1",
       "email": "User@ferreteria.com",
-      "role": "user",
+      "name": "user11",
       "password": "123",
-      "last_login": "2026-01-18T09:21:45Z"
+      "role": "user",
+      "id": "2"
     },
     {
       "id": "e24a",
@@ -397,7 +396,7 @@
       "total_users": 3,
       "total_sales": 1,
       "total_revenue": 670,
-      "total_products": 3
+      "total_products": 21
     },
     "recent_sales": [
       {
