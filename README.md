@@ -1,7 +1,7 @@
 # CrudVentory
 
 
-## REQUERIMIENTOS `/back`
+## REQUERIMIENTOS `/Back`
 - npm: `v10.9.2`
 - node.js: `v22.17.0`
 - json-server: `v1.0.0-beta.3`
@@ -45,20 +45,18 @@ JSON - SERVER
 ## Folder Structure
      CRUDVENTORY/
      ├── Back/        
-     │   ├── api/
-     │   │   └── api
      │   ├── models/
      │   │   ├── Product.js
      │   │   └── User.js
      │   ├── utils/
      │   │   ├── alerts.js
      │   │   └── functions.js
-     │   ├── database/
-     │   │   └── db.json
-     │   ├── app.js  #Entry point for JSON-server deployment
+     │   ├── db.json
      │   ├── package-lock.json
      │   └── package.json
      ├── Front/
+     │   ├── api/
+     │   │   └── api
      │   ├── admin/
      │   │   ├── js/
      │   │   │   └── script.js
