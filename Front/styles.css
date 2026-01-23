@@ -13,20 +13,24 @@
 #nav-back-color {
     background-color: black;
 }
+
 #nav-logo-box {
     display: flex;
     align-items: center;
 }
+
 #nav-logo {
     font-size: 2rem;
     font-weight: 700;
     color: #EECA10;
 }
+
 #nav-menu-box {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
+
 .nav-menu-txt-box {
     display: flex;
     justify-content: center;
@@ -36,9 +40,11 @@
     border-radius: 2px;
     transition: 0.2s;
 }
+
 .nav-menu-txt-box:hover {
     background-color: #EECA10;
 }
+
 .nav-menu-txt {
     text-decoration: none;
     font-weight: 600;
@@ -46,6 +52,7 @@
     color: #EECA10;
     transition: 0.2s;
 }
+
 .nav-menu-txt:hover {
     color: black;
 }
@@ -53,29 +60,33 @@
 /* Estilos para el Hero */
 #hero-section {
     background-image:
-        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
         url("./assets/images/hero-background.jpg");
 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
+
 #hero-col-left {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+
 #h1-hero {
     font-size: 2rem;
     font-weight: 700;
     color: white;
     margin-bottom: 20px;
 }
+
 .info {
     color: white;
     max-width: 800px;
     margin-bottom: 20px;
 }
+
 .general-button {
     border: none;
     background-color: #EECA10;
@@ -87,6 +98,7 @@
     padding-right: 8px;
     transition: 0.2s;
 }
+
 .general-button:hover {
     transform: scale(1.1);
 }
@@ -96,6 +108,7 @@
     padding-top: 40px;
     padding-bottom: 40px;
 }
+
 .subtitle-page {
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
@@ -106,17 +119,20 @@
 #details-back-color {
     background-color: rgb(240, 240, 240);
 }
+
 .product-img-box {
     width: 25rem;
     height: 25rem;
     overflow: hidden;
     margin-top: 40px;
 }
+
 .product-img-box img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
 .name-product {
     margin-top: 40px;
     display: flex;
@@ -125,17 +141,20 @@
     font-weight: 600;
     font-size: 24px;
 }
+
 .boxxx {
     display: flex;
     justify-content: flex-start;
     margin: 10px;
 }
+
 .boxx {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     margin: 10px;
 }
+
 .price-before {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
@@ -143,6 +162,7 @@
     color: gray;
     text-decoration: line-through;
 }
+
 .price-after {
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
@@ -156,12 +176,14 @@
 #footer-back-color {
     background-color: black;
 }
+
 #footer-title {
     color: #EECA10;
     font-weight: 700;
     font-size: 2rem;
     margin-bottom: .625rem;
 }
+
 .footer-text {
     color: white;
     font-weight: 500;
@@ -170,18 +192,21 @@
     margin-top: .625rem;
     margin-bottom: .625rem;
 }
+
 .footer-subtitle {
     color: #EECA10;
     font-weight: 600;
     font-size: 1.25rem;
     margin-bottom: 1.25rem;
 }
+
 .footer-last {
     color: #EECA10;
     font-weight: 600;
     font-size: 1rem;
     margin-bottom: 3.75rem;
 }
+
 .footer-row {
     padding-top: 50px;
 }
@@ -193,7 +218,20 @@
         flex-direction: column;
         justify-content: center;
     }
+
+    #nav-row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #nav-menu-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
+
 @media (max-width: 768px) {
     #nav-logo-box {
         display: flex;
