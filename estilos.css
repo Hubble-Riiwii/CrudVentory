@@ -168,7 +168,7 @@ input:not(:placeholder-shown) ~ .reset {
   position: absolute;
   top: 40px;
   left: 0;
-  background-color: rgb(107, 107, 107);
+   background-color: rgb(173, 173, 173);
   min-width: 120px;
   box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
   border-radius: 8px;
@@ -240,7 +240,7 @@ input:not(:placeholder-shown) ~ .reset {
 
 aside{
   width: 230px;
-  height: 750px;
+  height: 625px;
   background-color: rgb(173, 173, 173);
   display: flex;
   flex-direction: column;
@@ -296,7 +296,7 @@ aside .bloque2 img{
   display: none;
   list-style: none;
   padding-left: 30px;
-  background-color: #fcfcfc;
+  background-color: rgb(173, 173, 173);;
   width: 100%;
 }
 
@@ -333,3 +333,69 @@ aside .bloque2 img{
 /*FINISH ASIDE*/
 /*=====================================================*/
 
+body {
+  min-height: 100vh;
+}
+
+@media (max-width: 1024px) {
+
+  nav {
+    padding: 0 10px;
+    gap: 10px;
+  }
+
+  .form {
+    --width-of-input: 160px;
+  }
+
+  .iconos-opciones {
+    gap: 10px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  /* NAV */
+  nav {
+    height: auto;
+    flex-direction: column;
+    padding: 10px 0;
+    gap: 10px;
+  }
+
+  .logo-menu {
+    gap: 10px;
+  }
+
+  .form {
+    width: 90%;
+    --width-of-input: 100%;
+  }
+
+  .iconos-opciones {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  /* ASIDE */
+  aside {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+  }
+
+  aside h2 {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+
+  aside ul li {
+    padding: 8px 0;
+  }
+
+  .submenu {
+    padding-left: 20px;
+  }
+
+}
