@@ -14,20 +14,6 @@
       "password": "123",
       "role": "user",
       "id": "2"
-    },
-    {
-      "id": "e24a",
-      "name": "Sergi Fajardo",
-      "email": "test@example.com",
-      "password": "123456",
-      "role": "user"
-    },
-    {
-      "id": "e2ee",
-      "name": "Juan David",
-      "email": "test2@example.com",
-      "password": "123456",
-      "role": "user"
     }
   ],
   "categories": [

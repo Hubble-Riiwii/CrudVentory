@@ -2,6 +2,8 @@ import Product from "./Product.js";
 export default class User{
     static db = "http://localhost:3000";
     static isListening = false;
+    static _users = new Map();
+
     role = "user";
     constructor(id, name, email, password, cart = new Map()){
         this.id=id;
@@ -11,10 +13,10 @@ export default class User{
         this.cart = cart; //Expected to include in constructor
     }
     static createUser({id, name, email, password, cart}){
-        if (!id || !name || !email || !password || !cart) {
+        if (!id || !name || !email || !password) {
             console.error("Missing required user fields");
         }
-        return new User(id, name, email, password, cart);
+        return new User(id, name, email, password, cart || []);
     }
     static async verifyEmail(email){
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/; //Regex to verify if it's username or email
@@ -52,5 +54,27 @@ export default class User{
             this.cart.set(productId, amountInCart+amount);
         }
         this.cart.set(productId, amount)
+    }
+    static async fetchUsers(){
+        try{
+            const response = await fetch(this.db+"/users/", {
+                method:"GET", 
+                headers:{"Content-Type":"application/json"}
+            })
+            if(!response.ok){
+                throw new Error(`HTTP ERROR! ${response.status}`)
+            }
+            const data = await response.json();
+            for(const user of data){
+                User._users.set(user?.id, this.createUser(user))
+            }
+            return true
+        } catch(er){
+            console.error("error", er)
+            return false;
+        }
+    }
+    static get users(){
+        return this._users;
     }
 }

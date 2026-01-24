@@ -41,4 +41,61 @@ export default class Admin extends User{
         //update product
 
     }
+    async deleteUser(id){
+        try{
+            const response = await fetch(`${User.db}/users/${id}`, { 
+                method: 'DELETE' 
+            });
+            if(!response.ok){
+                throw new Error(`HTTP ERROR!! ${response.status}`)
+            }
+            const data = await response.json()
+        } catch (er){
+            console.error("error", er)
+            return er;
+        } finally{
+            User.users.delete(id);
+            let total_users = User.users.size
+            return this.updateDashboardStats({"total_users": total_users});
+        }
+    }
+    async updateDashboardStats(sta){
+        console.log("Called")
+        let data;
+        try{
+            const response = await fetch(User.db+"/dashboard/", {
+                method:"GET",
+                headers:{"Content-Type":"application/json"}
+            })
+            if(!response.ok){
+                throw new Error(`HTTP ERROR! ${response.status}`)
+            }
+            data = await response.json();
+            console.log(data)
+        } catch(er){
+            console.error("error", er)
+            return er
+        }
+        console.log("Executed", data)
+        for (const stat in sta){
+            if(Object.hasOwn(data.stats,stat)){
+                console.log("tiene", sta[stat])
+                data.stats[stat] = sta[stat]
+            }
+        }
+        try{
+            const response = await fetch(User.db+"/dashboard", {
+                method:"POST",
+                headers:{"Content-Type":"application/json"},
+                body: JSON.stringify(data)
+            })
+            if(!response.ok){
+                throw new Error(`HTTP ERROR! ${response.status}`)
+            }
+        } catch(er){
+            console.error("error", er)
+            return er
+        }
+        console.log("excuted", data)
+    }
 }

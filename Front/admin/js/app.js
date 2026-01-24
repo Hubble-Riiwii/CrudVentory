@@ -122,7 +122,7 @@ const renderUsersCRUD = (users) => `
           <td>${u.role}</td>
           <td class="text-end">
             <button class="btn btn-sm btn-warning me-1" onclick="editUser('${u.id}')">Editar</button>
-            <button class="btn btn-sm btn-danger" onclick="removeUser('${u.id}')">Eliminar</button>
+            <button class="btn btn-sm btn-danger" onclick="removeUser('${u.id}')" data-user-id="${u.id}">Eliminar</button>
           </td>
         </tr>
       `).join('')}
@@ -136,7 +136,7 @@ const renderUserForm = (user = {}) => `
       <h5>${user.id ? 'Editar Usuario' : 'Nuevo Usuario'}</h5>
       <form id="userForm">
         <input type="hidden" id="userId" value="${user.id || ''}">
-        <input class="form-control mb-2" id="name" placeholder="Nombre" value="${user.name || ''}" required>
+        <input class="form-control mb-2" id="username" placeholder="Nombre" value="${user.name || ''}" required>
         <input class="form-control mb-2" id="email" placeholder="Email" value="${user.email || ''}" required>
         <input class="form-control mb-2" id="password" placeholder="Password" value="${user.password || ''}" required>
         <select class="form-select mb-2" id="role">
@@ -195,7 +195,7 @@ document.addEventListener('submit', async (e) => {
 
   const id = document.getElementById('userId').value;
   const user = {
-    name: name.value,
+    name: username.value,
     email: email.value,
     password: password.value,
     role: role.value
