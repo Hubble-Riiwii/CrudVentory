@@ -33,22 +33,22 @@
   ],
   "categories": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Maquinaria y Equipos",
       "description": "Generadores, mezcladoras, herramientas eléctricas pesadas y sistemas solares."
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Pintura y Acabados",
       "description": "Brochas, rodillos y pinturas para protección y decoración de superficies."
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Herramientas de Mano",
       "description": "Alicates, destornilladores, llaves Allen y herramientas manuales de construcción."
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Plomería y Gas",
       "description": "Tuberías, codos, válvulas, mangueras y accesorios para redes de agua y gas."
     }
@@ -71,7 +71,7 @@
       "name": "Codo de Cobre 90° para soldar",
       "category_id": 4,
       "price": 9500,
-      "stock": 45,
+      "stock": 43,
       "description": "Accesorio de cobre ideal para instalaciones de agua caliente y gas.",
       "images": [
         ".././Front/assets/products/102.jpg"
@@ -239,7 +239,7 @@
       "name": "Mezcladora de Concreto Bauker",
       "category_id": 1,
       "price": 2550000,
-      "stock": 3,
+      "stock": 1,
       "description": "Mezcladora tipo trompo de alta resistencia.",
       "images": [
         ".././Front/assets/products/113.webp"

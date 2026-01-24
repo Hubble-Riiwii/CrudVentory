@@ -78,7 +78,7 @@ document.querySelector("#buy-now").addEventListener('click', () => {
 
 document.querySelector("#wpp").addEventListener('click', ()=>{
     const cel = '5733333333333';
-    const message = `Hola ToolStore me interesa el producto ${product.name} valor: ${product.price}`
+    const message = `Hola ToolStore, me interesa el producto '${product.name}' de precio: ${product.price}`
     window.open(
         `https://wa.me/${cel}?text=${encodeURIComponent(message)}`,
         "_blank"

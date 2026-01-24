@@ -51,6 +51,8 @@
     font-size: 18px;
     color: #EECA10;
     transition: 0.2s;
+    background: none;
+    border: none;
 }
 
 .nav-menu-txt:hover {
