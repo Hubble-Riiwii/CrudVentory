@@ -8,13 +8,6 @@
       "password": "111"
     },
     {
-      "id": "2",
-      "name": "User",
-      "email": "user@example.com",
-      "password": "123",
-      "role": "user"
-    },
-    {
       "id": "e24a",
       "name": "Sergi Fajardo",
       "email": "test@example.com",
@@ -27,6 +20,20 @@
       "email": "test2@example.com",
       "password": "123456",
       "role": "user"
+    },
+    {
+      "name": "User123",
+      "email": "User123@gmail.com",
+      "password": "123",
+      "role": "user",
+      "id": "f8kAYzl"
+    },
+    {
+      "name": "uSER456",
+      "email": "user456@gmail.com",
+      "password": "123",
+      "role": "admin",
+      "id": "XutyheG"
     }
   ],
   "categories": [
@@ -291,6 +298,30 @@
         ".././Front/assets/products/121.webp"
       ],
       "product_state": 3
+    },
+    {
+      "name": "Juego de 42 herramientas Pretul Comfort Grip SET‑42",
+      "category_id": 1,
+      "price": 180000,
+      "stock": 30,
+      "description": "Este Juego de Herramientas Pretul 42 piezas Comfort Grip es un set completo ideal para el hogar, taller o proyectos de mantenimiento general. Viene en un práctico estuche plástico con organizadores internos para mantener todas las piezas ordenadas y de fácil acceso. Cada herramienta está claramente marcada para identificación rápida, y el diseño Comfort Grip ofrece un agarre cómodo durante su uso.",
+      "product_state": 1,
+      "images": [
+        "https://ferreteriaya.com.co/wp-content/uploads/2020/06/Juego-de-Herramienta-42-Piezas-Pretul-22101-SF.png"
+      ],
+      "id": "Z5SuOrF"
+    },
+    {
+      "name": "Kit Multiherramientas 6 Piezas Multifunción",
+      "category_id": 1,
+      "price": 119000,
+      "stock": 30,
+      "description": "ste Kit Multiherramientas Ferreteras Premium reúne las herramientas esenciales que todo aficionado o profesional necesita para tareas de mantenimiento, bricolaje y construcción liviana",
+      "product_state": 1,
+      "images": [
+        "https://www.laferretteri.com/cdn/shop/collections/2.png?v=1719464297"
+      ],
+      "id": "1Es37Id"
     }
   ],
   "config": {
@@ -392,10 +423,10 @@
   },
   "dashboard": {
     "stats": {
-      "total_users": 4,
+      "total_users": 5,
       "total_sales": 1,
       "total_revenue": 670,
-      "total_products": 21
+      "total_products": 22
     },
     "recent_sales": [
       {
