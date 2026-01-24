@@ -57,7 +57,7 @@ export default class User{
     }
     static async fetchUsers(){
         try{
-            const response = await fetch(this.db+"/users/", {
+            const response = await fetch(this.db+"/users", {
                 method:"GET", 
                 headers:{"Content-Type":"application/json"}
             })

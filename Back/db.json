@@ -14,6 +14,27 @@
       "password": "123",
       "role": "user",
       "id": "2"
+    },
+    {
+      "name": "usuario",
+      "email": "user@gmail.com",
+      "password": "111",
+      "role": "user",
+      "id": "g7wGolz"
+    },
+    {
+      "name": "usuario",
+      "email": "user3@gmail.com",
+      "password": "111",
+      "role": "user",
+      "id": "gy1UeSq"
+    },
+    {
+      "name": "usuario2",
+      "email": "user2@gmail.com",
+      "password": "111",
+      "role": "user",
+      "id": "GG0nauH"
     }
   ],
   "categories": [
@@ -379,7 +400,7 @@
   },
   "dashboard": {
     "stats": {
-      "total_users": 3,
+      "total_users": 4,
       "total_sales": 1,
       "total_revenue": 670,
       "total_products": 21

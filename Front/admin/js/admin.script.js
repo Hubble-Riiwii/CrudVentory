@@ -6,9 +6,10 @@ document.addEventListener("DOMContentLoaded", ()=>{
 })
 const admin = Admin.createAdmin(JSON.parse(sessionStorage.getItem("user")))
 await Admin.fetchUsers();
-document.addEventListener("click", e=>{
+console.log(Admin.users)
+document.addEventListener("click", async e=>{
     let attribute = e.target.getAttribute("data-user-id")
     if(attribute){
-        admin.deleteUser(attribute)
+        console.log(await admin.deleteUser(attribute))
     }
 })

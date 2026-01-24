@@ -59,8 +59,7 @@ export default class Admin extends User{
             return this.updateDashboardStats({"total_users": total_users});
         }
     }
-    async updateDashboardStats(sta){
-        console.log("Called")
+    async getDashboardStats(sta){
         let data;
         try{
             const response = await fetch(User.db+"/dashboard/", {
@@ -71,31 +70,25 @@ export default class Admin extends User{
                 throw new Error(`HTTP ERROR! ${response.status}`)
             }
             data = await response.json();
-            console.log(data)
+            return data.stats;
         } catch(er){
             console.error("error", er)
             return er
         }
-        console.log("Executed", data)
-        for (const stat in sta){
-            if(Object.hasOwn(data.stats,stat)){
-                console.log("tiene", sta[stat])
-                data.stats[stat] = sta[stat]
-            }
-        }
+    }
+    async updateDashboardStats(statsUpdate){
         try{
+            const stats = await this.getDashboardStats();
+            const updatedStats = {...stats, ...statsUpdate}
             const response = await fetch(User.db+"/dashboard", {
-                method:"POST",
+                method:"PATCH",
                 headers:{"Content-Type":"application/json"},
-                body: JSON.stringify(data)
+                body:JSON.stringify({stats: updatedStats})
             })
-            if(!response.ok){
-                throw new Error(`HTTP ERROR! ${response.status}`)
-            }
+            return await response.json();
         } catch(er){
             console.error("error", er)
             return er
         }
-        console.log("excuted", data)
     }
 }
