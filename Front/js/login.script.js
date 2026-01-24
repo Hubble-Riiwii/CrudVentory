@@ -16,6 +16,7 @@ document.getElementById("loginForm").addEventListener("submit", async e=>{
 document.addEventListener("DOMContentLoaded", ()=>{
     const user = JSON.parse(sessionStorage.getItem("user"));
     if(user!==null){
+        if(user.role === "admin") location = "./admin/"
         location = "./index.html"
     }
 })
