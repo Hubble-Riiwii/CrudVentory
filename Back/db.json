@@ -5,15 +5,14 @@
       "name": "Admin Principal",
       "email": "admin@ferreteria.com",
       "role": "admin",
-      "password": "111",
-      "last_login": "2026-01-19T12:34:56Z"
+      "password": "111"
     },
     {
-      "email": "User@ferreteria.com",
-      "name": "user11",
+      "id": "2",
+      "name": "User",
+      "email": "user@example.com",
       "password": "123",
-      "role": "user",
-      "id": "2"
+      "role": "user"
     },
     {
       "id": "e24a",
@@ -32,22 +31,22 @@
   ],
   "categories": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Maquinaria y Equipos",
       "description": "Generadores, mezcladoras, herramientas eléctricas pesadas y sistemas solares."
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Pintura y Acabados",
       "description": "Brochas, rodillos y pinturas para protección y decoración de superficies."
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Herramientas de Mano",
       "description": "Alicates, destornilladores, llaves Allen y herramientas manuales de construcción."
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Plomería y Gas",
       "description": "Tuberías, codos, válvulas, mangueras y accesorios para redes de agua y gas."
     }
@@ -274,7 +273,7 @@
       "name": "Esmeriladora Angular 4-1/2\"",
       "category_id": 1,
       "price": 220000,
-      "stock": 15,
+      "stock": 14,
       "description": "Pulidora eléctrica potente para corte y desbaste.",
       "images": [
         ".././Front/assets/products/119.webp"
@@ -393,7 +392,7 @@
   },
   "dashboard": {
     "stats": {
-      "total_users": 3,
+      "total_users": 4,
       "total_sales": 1,
       "total_revenue": 670,
       "total_products": 21

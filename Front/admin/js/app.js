@@ -136,7 +136,7 @@ const renderUserForm = (user = {}) => `
       <h5>${user.id ? 'Editar Usuario' : 'Nuevo Usuario'}</h5>
       <form id="userForm">
         <input type="hidden" id="userId" value="${user.id || ''}">
-        <input class="form-control mb-2" id="name" placeholder="Nombre" value="${user.name || ''}" required>
+        <input class="form-control mb-2" id="username" placeholder="Nombre" value="${user.name || ''}" required>
         <input class="form-control mb-2" id="email" placeholder="Email" value="${user.email || ''}" required>
         <input class="form-control mb-2" id="password" placeholder="Password" value="${user.password || ''}" required>
         <select class="form-select mb-2" id="role">
@@ -181,6 +181,7 @@ const editUser = async (id) => {
   const user = users.find(u => u.id == id);
   document.querySelector('.main')
     .insertAdjacentHTML('afterbegin', renderUserForm(user));
+  
 };
 
 const removeUser = async (id) => {
@@ -195,7 +196,7 @@ document.addEventListener('submit', async (e) => {
 
   const id = document.getElementById('userId').value;
   const user = {
-    name: name.value,
+    name: username.value,
     email: email.value,
     password: password.value,
     role: role.value
@@ -207,7 +208,8 @@ document.addEventListener('submit', async (e) => {
 
 // NAVIGATION
 document.querySelector('.dashborad').addEventListener('click', loadDashboard);
-document.querySelector('.manage-app').addEventListener('click', loadUsersCrud);
+document.querySelector('.manage-users').addEventListener('click', loadUsersCrud);
+document.querySelector('.manage-products').addEventListener('click', loadUsersCrud);
 document.querySelector('.Landing-page').addEventListener('click', () => {
   window.location = '../index.html';
 });
