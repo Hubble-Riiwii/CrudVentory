@@ -119,24 +119,7 @@ const renderUsersCRUD = users => `
           <button class="btn btn-danger btn-sm" onclick="removeUser('${u.id}')">Eliminar</button>
         </td>
       </tr>
-<<<<<<< HEAD
     `).join('')}
-=======
-    </thead>
-    <tbody>
-      ${users.map(u => `
-        <tr>
-          <td>${u.name}</td>
-          <td>${u.email}</td>
-          <td>${u.role}</td>
-          <td class="text-end">
-            <button class="btn btn-sm btn-warning me-1" onclick="editUser('${u.id}')">Editar</button>
-            <button class="btn btn-sm btn-danger" onclick="removeUser('${u.id}')" data-user-id="${u.id}">Eliminar</button>
-          </td>
-        </tr>
-      `).join('')}
-    </tbody>
->>>>>>> Santiago
   </table>
 `;
 
