@@ -15,7 +15,6 @@
       "id": "g7wGolz"
     },
     {
-<<<<<<< HEAD
       "id": "e2ee",
       "name": "Juan David",
       "email": "test2@example.com",
@@ -35,20 +34,6 @@
       "password": "123",
       "role": "admin",
       "id": "XutyheG"
-=======
-      "name": "usuario",
-      "email": "user3@gmail.com",
-      "password": "111",
-      "role": "user",
-      "id": "gy1UeSq"
-    },
-    {
-      "name": "usuario2",
-      "email": "user2@gmail.com",
-      "password": "111",
-      "role": "user",
-      "id": "GG0nauH"
->>>>>>> Santiago
     }
   ],
   "categories": [
@@ -438,11 +423,7 @@
   },
   "dashboard": {
     "stats": {
-<<<<<<< HEAD
       "total_users": 5,
-=======
-      "total_users": 4,
->>>>>>> Santiago
       "total_sales": 1,
       "total_revenue": 670,
       "total_products": 22
