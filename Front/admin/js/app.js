@@ -178,7 +178,6 @@ const renderProductCRUD = products => `
 const renderProductForm = (product = {}) => `
   <div class="card mb-3">
     <div class="card-body">
-<<<<<<< HEAD
       <h5>${product.id ? 'Editar Producto' : 'Nuevo Producto'}</h5>
 
       <form id="productForm">
@@ -196,17 +195,6 @@ const renderProductForm = (product = {}) => `
           <option value="2" ${product.category_id == 2 ? 'selected' : ''}>Pintura y Acabados</option>
           <option value="3" ${product.category_id == 3 ? 'selected' : ''}>Herramientas de Mano</option>
           <option value="4" ${product.category_id == 4 ? 'selected' : ''}>Plomería y Gas</option>
-=======
-      <h5>${user.id ? 'Editar Usuario' : 'Nuevo Usuario'}</h5>
-      <form id="userForm">
-        <input type="hidden" id="userId" value="${user.id || ''}">
-        <input class="form-control mb-2" id="username" placeholder="Nombre" value="${user.name || ''}" required>
-        <input class="form-control mb-2" id="email" placeholder="Email" value="${user.email || ''}" required>
-        <input class="form-control mb-2" id="password" placeholder="Password" value="${user.password || ''}" required>
-        <select class="form-select mb-2" id="role">
-          <option value="admin" ${user.role === 'admin' ? 'selected' : ''}>Admin</option>
-          <option value="user" ${user.role === 'user' ? 'selected' : ''}>User</option>
->>>>>>> Santiago
         </select>
 
         <input type="number"
@@ -313,15 +301,9 @@ document.addEventListener('submit', async (e) => {
   const id = document.getElementById('userId').value;
 
   const user = {
-<<<<<<< HEAD
     name: username.value.trim(),
     email: email.value.trim(),
     password: password.value.trim(),
-=======
-    name: username.value,
-    email: email.value,
-    password: password.value,
->>>>>>> Santiago
     role: role.value
   };
 
