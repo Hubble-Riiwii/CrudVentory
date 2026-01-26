@@ -15,11 +15,12 @@ export default class User{
     static createUser({id, name, email, password, cart}){
         if (!id || !name || !email || !password) {
             console.error("Missing required user fields");
+            return null
         }
         return new User(id, name, email, password, cart || []);
     }
     static async verifyEmail(email){
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/; //Regex to verify if it's username or email
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/; //Regex to validate email
         if(!emailRegex.test(email)){
             return false
         }
@@ -38,7 +39,7 @@ export default class User{
             return false
         } catch (err){
             console.error("error", err)
-            return null;
+            return er;
         }
     }
     //Add methods for buying and updating user information
