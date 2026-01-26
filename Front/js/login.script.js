@@ -17,7 +17,11 @@ document.addEventListener("DOMContentLoaded", ()=>{
     const user = JSON.parse(sessionStorage.getItem("user"));
     if(user!==null){
         if(user.role === "admin") {
+<<<<<<< HEAD
             window.location = "./admin/"
+=======
+            location = "./admin/"
+>>>>>>> Santiago
         } else{
             location = "./index.html"
         }

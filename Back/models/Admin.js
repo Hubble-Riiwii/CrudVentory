@@ -41,4 +41,54 @@ export default class Admin extends User{
         //update product
 
     }
+    async deleteUser(id){
+        try{
+            const response = await fetch(`${User.db}/users/${id}`, { 
+                method: 'DELETE' 
+            });
+            if(!response.ok){
+                throw new Error(`HTTP ERROR!! ${response.status}`)
+            }
+            const data = await response.json()
+        } catch (er){
+            console.error("error", er)
+            return er;
+        } finally{
+            User.users.delete(id);
+            let total_users = User.users.size
+            return this.updateDashboardStats({"total_users": total_users});
+        }
+    }
+    async getDashboardStats(sta){
+        let data;
+        try{
+            const response = await fetch(User.db+"/dashboard/", {
+                method:"GET",
+                headers:{"Content-Type":"application/json"}
+            })
+            if(!response.ok){
+                throw new Error(`HTTP ERROR! ${response.status}`)
+            }
+            data = await response.json();
+            return data.stats;
+        } catch(er){
+            console.error("error", er)
+            return er
+        }
+    }
+    async updateDashboardStats(statsUpdate){
+        try{
+            const stats = await this.getDashboardStats();
+            const updatedStats = {...stats, ...statsUpdate}
+            const response = await fetch(User.db+"/dashboard", {
+                method:"PATCH",
+                headers:{"Content-Type":"application/json"},
+                body:JSON.stringify({stats: updatedStats})
+            })
+            return await response.json();
+        } catch(er){
+            console.error("error", er)
+            return er
+        }
+    }
 }
